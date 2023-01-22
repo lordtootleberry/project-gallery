@@ -1,8 +1,13 @@
 console.log("pc");
 
-function doTheThing() {
+function addElementToPage() {
 
   console.log("thing done");
+
+  const node = document.createElement("div");
+
+  document.body.appendChild(node);
+
 };
 
 

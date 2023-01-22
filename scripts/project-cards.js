@@ -8,6 +8,10 @@ function addElementToPage() {
 
   document.body.appendChild(node);
 
+  const textNode = document.createTextNode("wowzers "+ Math.random().toFixed(1));
+
+  node.appendChild(textNode);
+
 };
 
 

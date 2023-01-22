@@ -1,5 +1,10 @@
 console.log("pc");
 
+function doTheThing(){
+
+console.log("thing done");
+};
+
 
 function createProjectCards() {
   let projectCards = [

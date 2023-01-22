@@ -4,13 +4,17 @@ function addElementToPage() {
 
   console.log("thing done");
 
-  const node = document.createElement("div");
-
-  document.body.appendChild(node);
+  const nodeToAdd = document.createElement("div");
+// not adding to end of body, but to end of projects div
+  // document.body.appendChild(nodeToAdd);
 
   const textNode = document.createTextNode("wowzers "+ Math.random().toFixed(1));
 
-  node.appendChild(textNode);
+  nodeToAdd.appendChild(textNode);
+
+  const projectEl = document.getElementById("projects");
+  
+  projectEl.appendChild(nodeToAdd);
 
 };
 

@@ -5,22 +5,22 @@ function generateProjectCards() {
     {
       title: 'Project 1',
       description: 'This is the first project.',
-      image: "/images/dog-1"
+      image: "/images/dog-1.jpg"
     },
     {
       title: 'Project 2',
       description: 'This is the second project.',
-      image: "/images/dog-2"
+      image: "/images/dog-2.jpg"
     },
     {
       title: 'Project 3',
       description: 'This is the third project.',
-      image: "/images/dog-3"
+      image: "/images/dog-3.jpg"
     },
     {
       title: 'Project 4',
       description: 'This is the fourth project.',
-      image: "/images/dog-4"
+      image: "/images/dog-4.jpg"
     }
   ];
 
@@ -29,31 +29,23 @@ function generateProjectCards() {
    const projectCardSection = document.getElementById("projectSection");
    
   //loop through the cards to generate the HTML
-  for (let card of projectCards) {
+  for (let pc of projectCards) {
+    //create a div elenment to hold the card
+    const card = document.createElement("div");
+    projectCardSection.appendChild(card);
 
-    //create the card div
-    const cardDiv = document.createElement("div");
-    //create a title node
-    const titleNode = document.createTextNode(card.title);
-    //append the title node to the card div
-    cardDiv.appendChild(titleNode);
+    const title = document.createElement("h2");
+    title.textContent = pc.title;
+    card.appendChild(title);
 
-    //create a description node
-    const descriptionNode = document.createTextNode(card.description);
-    //append the description node to the card div
-    cardDiv.appendChild(descriptionNode);
+    const description = document.createElement("p");
+    description.textContent = pc.description;
+    card.appendChild(description);
 
-    //create an image element
-    const imageElement = document.createElement("img");
-    //set the src attribute of the image element
-    imageElement.setAttribute("src", card.image);
-    //append the image element to the card div
-    cardDiv.appendChild(imageElement);
+    const image = document.createElement("img");
+    image.src = pc.image;
+    card.appendChild(image);
 
-    console.log(projectCardSection);
-
-    //append the card div to the project card section
-    projectCardSection.appendChild(cardDiv);
   }
 }
 

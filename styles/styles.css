@@ -21,7 +21,7 @@
 
 div {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     margin: 0.5rem;
     background-color: salmon;
 }
@@ -31,6 +31,13 @@ section {
     background-color: aquamarine;
     border-radius: 1rem;
     padding: 1rem;
+}
+
+img {
+    float: left;
+    width:  100px;
+    height: 100px;
+    object-fit: cover;
 }
 
 
